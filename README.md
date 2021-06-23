@@ -4,7 +4,7 @@
 
 Small network scanning tool
 
-## Reaction Role Feature
+## Features
 
 Scans all IP's in your network
 
