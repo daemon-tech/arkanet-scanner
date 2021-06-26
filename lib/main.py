@@ -5,6 +5,7 @@ import platform
 import socket
 from datetime import datetime
 from pyfiglet import Figlet
+from numba import jit
 from termcolor import colored, cprint
 from socket import *
 
@@ -21,9 +22,8 @@ print(colored(26*" " + "4. Port Scanner -> Threaded -> efficiency", "blue"))
 
 def port_scanner_socket():
     startTime = time.time()
-    target = input("Enter the host: ::")
+    target = input("Enter the host: ")
     t_IP = gethostbyname(target)
-    print(colored(f"Scanning Host on: {t_IP}", "blue"))
     for i in range(50, 500):
         s = socket(AF_INET, SOCK_STREAM)
         conn = s.connect_ex((t_IP, i))

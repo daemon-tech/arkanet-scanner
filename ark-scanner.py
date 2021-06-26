@@ -22,3 +22,4 @@ except ModuleNotFoundError:
         os.system("python3 -m pip install termcolor")
     
 os.system("python3 lib/main.py")
+print("done")
